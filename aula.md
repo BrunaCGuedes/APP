@@ -54,6 +54,10 @@
  Executar
  Arrow function / named function
 
- # Estrutura de repetição
+# Estrutura de repetição
 
   while
+
+# Condicionais
+
+ switch
