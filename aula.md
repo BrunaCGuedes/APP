@@ -61,3 +61,8 @@
 # Condicionais
 
  switch
+
+## Módulos em Node.js:
+ 
+ Importação de módulos (reqiore, commonJS)
+ Biblioteca 'inquirer' para ccriar prompts interativos
