@@ -37,7 +37,7 @@
   
   Operador de atribuição de valor: =
   Operador de concatenação: +
-  Operadores de comparação: ==    !=    <=  >=    <>
+  Operadores de comparação: ==    !=    <=  >=    < >
   Spread operator: ...
 
 ## Estrutura de dados:
