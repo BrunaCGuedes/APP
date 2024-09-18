@@ -37,13 +37,15 @@
   
   Operador de atribuição de valor: =
   Operador de concatenação: +
-  Operadores de comparação: ==    !=    <=  >=    <>    
+  Operadores de comparação: ==    !=    <=  >=    <>
+  Spread operator: ...
 
 ## Estrutura de dados:
 
 ### Arrays:
 
  Uma Lista que contém qualquer tipo de dado
+ Métodos de array: push, [find, forEach, filter] : HOF (Higher Order Functions)
 
 ### Objetos: 
  Atributos e métodos
