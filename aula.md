@@ -35,8 +35,9 @@
  
 # Operadores
   
-  Operador de atribuição de valor =
-  Operador de concatenação +
+  Operador de atribuição de valor: =
+  Operador de concatenação: +
+  Operadores de comparação: ==    !=    <=  >=    <>    
 
 ## Estrutura de dados:
 
@@ -61,8 +62,13 @@
 # Condicionais
 
  switch
+ if/else
 
 ## Módulos em Node.js:
  
  Importação de módulos (reqiore, commonJS)
  Biblioteca 'inquirer' para ccriar prompts interativos
+
+## Programação assíncrona e promeses:
+
+  Uso de funções assíncronas (async/await)
