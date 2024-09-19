@@ -20,9 +20,9 @@ const salvarMetas = async () => {
 }
 
 const cadastrarMeta = async () => {
-  const meta = await input({message: "Digite a meta:"})
+  const meta = await input({ message: "Digite a meta:" })
 
-  if(meta.length == 0) {
+  if (meta.length == 0) {
     mensagem = 'A meta não pode ser vazia.'
     return
   }
@@ -30,13 +30,11 @@ const cadastrarMeta = async () => {
   metas.push(
     { value: meta, checked: false}
   )
-  
   mensagem = "Meta cadastrada com sucesso!"
-
 }
 
 const listarMetas = async () => {
-  if(metas.length == 0) {
+  if (metas.length == 0) {
     mensagem = "Não existem metas!"
     return
   }
@@ -56,7 +54,7 @@ const listarMetas = async () => {
     return
   }
 
-  respostas.forEach((respostas) => {
+  respostas.forEach((resposta) => {
     const meta = metas.find((m) => {
       return m.value == resposta
     })
@@ -68,7 +66,7 @@ const listarMetas = async () => {
 }
 
 const metasRealizadas = async () => {
-  if(metas.length == 0) {
+  if (metas.length == 0) {
     mensagem = "Não existem metas!"
     return
   }
@@ -77,20 +75,20 @@ const metasRealizadas = async () => {
     return meta.checked
   })
 
-  if(realizadas.length == 0) {
+  if (realizadas.length == 0) {
     mensagem = 'Não existem metas realizadas! :('
     return
   }
 
   await select({
-    message: "Metas Realizadas: " + abertas.length,
+    message: "Metas Realizadas: " + realizadas.length,
     choices: [...realizadas]
   })
  
 }
 
 const metasAbertas = async () => {
-  if(metas.length == 0) {
+  if (metas.length == 0) {
     mensagem = "Não existem metas!"
     return
   }
@@ -105,7 +103,7 @@ const metasAbertas = async () => {
   }
 
   await select({
-    message: "Metas Aertas: ",
+    message: "Metas Aertas: " + abertas.length,
     choices: [...abertas]
   })
 
@@ -124,7 +122,7 @@ const deletarMetas = async () => {
   const itemsADeletar = await checkbox({
     message: "Selecionar item para deletar",
     choices: [...metasDesmarcadas],
-    instructions: false
+    instructions: false,
   })
 
   if(itemsADeletar.length == 0) {
@@ -133,7 +131,7 @@ const deletarMetas = async () => {
   }
 
   itemsADeletar.forEach((item) => {
-    metas.filter((meta) => {
+    metas = metas.filter((meta) => {
       return meta.value != item
     })
   })
@@ -157,7 +155,7 @@ const start = async () => {
   while(true){
       mostrarMensagem()
       await salvarMetas()
-
+      
       const opcao = await select({
         message: "menu >",
         choices: [
@@ -189,7 +187,7 @@ const start = async () => {
       })
 
 
-      switch(opcao) {
+      switch (opcao) {
         case "cadastrar":
           await cadastrarMeta()
           break
