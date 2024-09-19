@@ -70,6 +70,12 @@
  
  Importação de módulos (reqiore, commonJS)
  Biblioteca 'inquirer' para ccriar prompts interativos
+ FS (file sistem)
+
+## JSON
+ Javascript Object Natation (.json)
+ JSON.parse(): Transforma de JSON para JS
+ JSON.stringify(): Transforma de JS para JSON
 
 ## Programação assíncrona e promeses:
 
